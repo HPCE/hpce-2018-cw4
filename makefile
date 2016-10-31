@@ -3,7 +3,7 @@ CPPFLAGS += -g
 CPPFLAGS += -O3
 CPPFLAGS += -I include
 
-CPPFLAGS += -I opencl_sdk/include
+#CPPFLAGS += -I opencl_sdk/include
 #LDFLAGS += -L opencl_sdk/lib/cygwin/x86
 #LDFLAGS += -L opencl_sdk/lib/windows/x86_64
 
