@@ -492,7 +492,11 @@ Submission
 ==========
 
 Your final github push before 22:00 on 14th of Nov is
-considered to be your submitted version.
+considered to be your submitted version. I'll be pulling
+them from there directly.
+
+If you wish to submit something to blackboard, then
+feel free to commit the text hash of the relevant commit.
 
 Optional: Mapping the clustered version to a GPU
 ================================================
