@@ -7,7 +7,17 @@ This is due at:
 
 This exercise looks at less regular types of computation,
 and looks at situations where you might have to re-organise
-the code in order to make it faster.
+the code in order to make it faster. 
+
+_This is another new coursework for this year, and is
+designed to act as a bit of a bridge between the
+highly structured CW1-CW3, and the more open-ended
+CW4 and CW5. It replaces the amazing makefile/pipeline
+coursework, which was great (I think), except that
+it was too time-consuming (plus lots of students had difficulty implementing FIRs).
+I've run through it a couple of times, and adjusted it
+down for time (made the GPU part at the end optional).
+Let me know where there are problems in the spec._
 
 The overall application domain is a very simple
 [multi-layer perceptron network](https://en.wikipedia.org/wiki/Multilayer_perceptron).
