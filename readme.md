@@ -140,9 +140,11 @@ makes it easier to check whether we are getting the right results.
 If we used floating-point then the order of execution matters,
 but with fixed-point it should always be the same.
 
-To run the application, generate 1024 bytes of random input data:
+To run the application, generate 1024 bytes of random input data
+(updated as [suggested](https://github.com/HPCE/hpce-2016-cw4/issues/1) by @
+awai54st) :
 
-    cat /dev/random | head -c 1024 > w/random1024.bin
+    cat /dev/urandom | head -c 1024 > w/random1024.bin
 
 You can then run the filter as a single layer network:
 
@@ -227,7 +229,7 @@ Note that this script provides no input and no output for `bin/run_network`,
 so it will come from the input and output of the script. To run it, generate
 a bigger chunk of input data:
 
-    cat /dev/random | head -c 1048576 > w/random1M.bin
+    cat /dev/urandom | head -c 1048576 > w/random1M.bin
 
 and then pipe it through:
 
