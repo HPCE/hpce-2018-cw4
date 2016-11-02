@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         // Load all the layers
         
         for(int i=1; i<argc; i++){
-            std::string config=argv[1];
+            std::string config=argv[i];
             std::string engine="auto";
             
             int colon=config.find(':');
