@@ -19,11 +19,13 @@ int main(int argc, char *argv[])
     if(argc>2){
         nOut=atoi(argv[2]);
     }
-    if(sparsity>3){
+    if(argc>3){
         sparsity=strtod(argv[3],0);
     }
+    
+    // generate_dense was taken out to simplify things.
     if(sparsity > 0.25){
-        fprintf(stderr, "Warning : suggest using generate_dense for sparsity > 0.25.\n");
+        fprintf(stderr, "Warning : sparsity of more than > 0.25 may be slow to generate.\n");
     }
 
     unsigned nSynapses=sparsity * nIn * unsigned(nOut);
