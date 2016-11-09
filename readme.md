@@ -497,7 +497,7 @@ amount of work per output item, and also the amount of atomic
 contention.
 
 *Task*: produce a plot which uses a single layer with nIn==nOut,
-and explores scaling of n (x-axis) versus type (y-axise), called
+and explores scaling of n (x-axis) versus time (y-axis), called
 `results/single_layer_n_vs_time.pdf`.
 
 Submission
