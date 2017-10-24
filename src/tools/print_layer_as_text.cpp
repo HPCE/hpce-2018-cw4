@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     
     fprintf(stdout, "nIn  = %6u\n", nIn);
     fprintf(stdout, "nOut = %6u\n", nOut);
-    fprintf(stdout, "nSynapses = %u\n", synapses.size());
+    fprintf(stdout, "nSynapses = %u\n", (unsigned)synapses.size());
     fprintf(stdout, "density = %g\n", synapses.size() / (double(nIn)*double(nOut)) );
     
     for(unsigned i=0; i<synapses.size(); i++){
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     
     fprintf(stdout, "nIn  = %6u\n", nIn);
     fprintf(stdout, "nOut = %6u\n", nOut);
-    fprintf(stdout, "nSynapses = %u\n", synapses.size());
+    fprintf(stdout, "nSynapses = %u\n", (unsigned)synapses.size());
     fprintf(stdout, "density = %g\n", synapses.size() / (double(nIn)*double(nOut)) );
     
     

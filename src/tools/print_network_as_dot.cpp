@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
         const auto &synapses=layers[i].synapses;
         for(unsigned j=0; j<synapses.size(); j++){
             if(i==0 && layers.size()==1){
-                fprintf(stdout, "  i%u -> o%u;\n", synapses[j].src, synapses[j].dst, synapses[j]);
+                fprintf(stdout, "  i%u -> o%u;\n", synapses[j].src, synapses[j].dst);
             }else if(i==0 && layers.size()>1){
                 fprintf(stdout, "  i%u -> h_%u_%u;\n", synapses[j].src, i+1, synapses[j].dst);
             }else if(i==layers.size()-1){
