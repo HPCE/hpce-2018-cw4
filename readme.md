@@ -47,11 +47,14 @@ This should leave you with a number of programs in the
 In order to get a feel for this, create a layer with
 8 inputs and 12 outputs:
 
-    mkdir -p working
     bin/generate_sparse_layer 8 12 > w/layer_8_12.bin
 
 This should have generated a file called `w/layer_8_12.bin`,
-which you can view as text:
+in the directory called `w`. This directory has a `.gitignore`
+that stops things getting accidentally added, so feel free to
+dump anything in there.
+
+You can view the layer as text:
 
     bin/print_layer_as_text < w/layer_8_12.bin
 
