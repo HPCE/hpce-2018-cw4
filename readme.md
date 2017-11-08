@@ -470,7 +470,8 @@ Evaluating performance
 ======================
 
 Use an AWS c4.8xlarge instance to evaluate the performance
-of the different implementations:
+of the different implementations (_though an `m4.xlarge` is
+acceptable [if necessary](https://github.com/HPCE/hpce-2017-cw4/issues/24)_):
 
 - `simple`
 
