@@ -3,11 +3,14 @@ Overview
 
 This is due at:
 
-    22:00, 10th Nov 2017
+    Mon Feb 18th 22:00
 
 This exercise looks at less regular types of computation,
 and looks at situations where you might have to re-organise
-the code in order to make it faster. 
+the code in order to make it faster. You are not _required_
+to apply GPU programming here, but it is strongly suggested
+to give it a go if you're on top of deadlines (it is good
+practise for CW5 and CW6).
 
 The overall application domain is a very simple
 [multi-layer perceptron network](https://en.wikipedia.org/wiki/Multilayer_perceptron).
@@ -20,7 +23,7 @@ the next layer, and so on.
 Exploring the application
 =========================
 
-The purposes of this course is to accelerate and optimise
+The purpose of this course is to accelerate and optimise
 things even if you don't fully understand them, so don't
 worry if you've never looked at neural networks. It is
 better to look at the code. So first build all the
@@ -133,9 +136,7 @@ makes it easier to check whether we are getting the right results.
 If we used floating-point then the order of execution matters,
 but with fixed-point it should always be the same.
 
-To run the application, generate 1024 bytes of random input data
-(updated as [suggested](https://github.com/HPCE/hpce-2016-cw4/issues/1) by @
-awai54st) :
+To run the application, generate 1024 bytes of random input data:
 
     cat /dev/urandom | head -c 1024 > w/random1024.bin
 
@@ -287,7 +288,7 @@ depends on the amount of data flowing through - if there is not
 enough data, then eventually the speed-up will reduce.
 
 *Task*: Generate a plot of P (i.e. which script was used) versus
-_sustained_ bandwidth (i.e. bytes/sec) for these scripts on a `c4.8xlarge`
+_sustained_ bandwidth (i.e. bytes/sec) for these scripts on a `c5.9xlarge`
 AWS instance. Note that you may want to leave this till all of
 your development work is done, so that you don't keep starting
 and stopping instances. Save the plot as `results/pipeline_p_vs_bandwidth.pdf`.
@@ -469,9 +470,8 @@ until you're reasonably sure the sequential one works.
 Evaluating performance
 ======================
 
-Use an AWS c4.8xlarge instance to evaluate the performance
-of the different implementations (_though an `m4.xlarge` is
-acceptable [if necessary](https://github.com/HPCE/hpce-2017-cw4/issues/24)_):
+Use an AWS c4.9xlarge instance to evaluate the performance
+of the different implementations:
 
 - `simple`
 
@@ -506,7 +506,7 @@ Optional: Mapping the clustered version to a GPU
 
 _Note: this is an optional suggested extra if you have time,
 as it makes sure that you have a very good handle on the
-OpenCL APIs. It took it out as a required element,
+OpenCL APIs. I took it out as a required element,
 as it was a bit complicated or time-consuming for this
 exercise and the amount of other stuff people have
 to do at this time point._
@@ -541,7 +541,7 @@ Some questions to consider (though not necessarily to do) would be:
 
 - How might you attempt to load balance work-load between
   work-items? Is it worth it? How would you spread the
-  cost of that between startup cost and the 
+  cost of that between startup cost and the execution cost?
 
 - What might happen if you knew something about the structure
   of the connections? For example if you had a very dense
@@ -560,7 +560,7 @@ OpenCL conversion as there is less boiler-plate code,
 though it requires a bit more reading of the docs._
 
 We've seen that pipelining can be applied between processes
-at the UNIX level, but there is a lot of innefficiency involved
+at the UNIX level, but there is a lot of inefficiency involved
 in moving the data between processes. TBB offers a
 built-in [pipeline pattern](https://www.threadingbuildingblocks.org/docs/help/reference/algorithms/pipeline_cls.html),
 which allows you to apply pipelining within a process. This
