@@ -1,9 +1,9 @@
 Overview
 ========
 
-This is due at:
+The deadline for this coursework is:
 
-    Mon Feb 18th 22:00
+    22:00 Mon 18 Feb
 
 This exercise looks at less regular types of computation,
 and looks at situations where you might have to re-organise
