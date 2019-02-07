@@ -470,7 +470,7 @@ until you're reasonably sure the sequential one works.
 Evaluating performance
 ======================
 
-Use an AWS c4.9xlarge instance to evaluate the performance
+Use an AWS c5.9xlarge instance to evaluate the performance
 of the different implementations:
 
 - `simple`
